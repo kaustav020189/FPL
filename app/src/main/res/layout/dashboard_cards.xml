@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/paddingSmall">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/dashboard_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/marginSmall"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="@dimen/card_radius">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/buttonActionIcon"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dashboardCardIconHeight"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:scaleType="fitXY" />
+
+
+            <TextView
+                android:id="@+id/buttonAction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/paddingSuperSmall"
+                android:paddingRight="@dimen/paddingSuperSmall"
+                android:paddingTop="@dimen/paddingSuperSmall"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/smallTextSize" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

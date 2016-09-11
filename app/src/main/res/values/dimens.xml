@@ -1,0 +1,27 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="loginFormTopPadding">50dp</dimen>
+    <dimen name="loginregisterinputboxwidth">175dp</dimen>
+    <dimen name="loginregisteredittextmargintop">25dp</dimen>
+
+    <dimen name="topMarginSmall">18dp</dimen>
+    <dimen name="topMarginLarge">30dp</dimen>
+    <dimen name="topMarginVeryLarge">80dp</dimen>
+    <dimen name="marginSmall">9dp</dimen>
+
+    <dimen name="paddingMedium">11dp</dimen>
+    <dimen name="paddingSmall">5dp</dimen>
+    <dimen name="paddingSuperSmall">2dp</dimen>
+
+    <dimen name="mediumTextSize">20dp</dimen>
+    <dimen name="smallTextSize">16dp</dimen>
+
+    <dimen name="nav_drawer_width">180dp</dimen>
+    <dimen name="dashboardCardIconHeight">15dp</dimen>
+    <dimen name="card_radius">3dp</dimen>
+    <dimen name="detail_backdrop_height">90dp</dimen>
+
+</resources>

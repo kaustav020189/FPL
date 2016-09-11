@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.androidprojects.kaustav.fpl.LoginRegister"
+    android:orientation="vertical"
+    >
+    <RelativeLayout android:background="@color/transparent"
+        android:id="@+id/RegisterForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_name"
+            android:layout_width="@dimen/loginregisterinputboxwidth"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/topMarginVeryLarge"
+            android:layout_gravity="right|top"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+            <EditText
+                android:id="@+id/input_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_name"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_email"
+            android:layout_width="@dimen/loginregisterinputboxwidth"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_layout_name"
+            android:layout_alignLeft="@+id/input_layout_name"
+            android:layout_alignStart="@+id/input_layout_name"
+            android:layout_marginTop="@dimen/marginSmall">
+
+            <EditText
+                android:id="@+id/input_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_password"
+            android:layout_width="@dimen/loginregisterinputboxwidth"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_layout_email"
+            android:layout_alignLeft="@+id/input_layout_email"
+            android:layout_alignStart="@+id/input_layout_email"
+            android:layout_marginTop="@dimen/marginSmall">
+
+            <EditText
+                android:id="@+id/input_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/hint_password"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_confirm_password"
+            android:layout_width="@dimen/loginregisterinputboxwidth"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_layout_password"
+            android:layout_alignLeft="@+id/input_layout_password"
+            android:layout_alignStart="@+id/input_layout_password"
+            android:layout_marginTop="@dimen/marginSmall">
+
+            <EditText
+                android:id="@+id/input_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/hint_confirm_password"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REGISTER"
+            android:textColor="@color/textColorPrimary"
+            android:id="@+id/registerbutton"
+            android:theme="@style/MyButton"
+            android:layout_marginTop="@dimen/marginSmall"
+            android:layout_below="@+id/input_layout_confirm_password"
+            android:layout_alignLeft="@+id/input_layout_confirm_password"
+            android:layout_alignStart="@+id/input_layout_confirm_password"
+            android:layout_alignRight="@+id/input_layout_confirm_password"
+            android:layout_alignEnd="@+id/input_layout_confirm_password" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/alreadyRegistered"
+            android:layout_marginTop="@dimen/topMarginSmall"
+            android:id="@+id/AlreadyRegisteredLink"
+            android:layout_below="@+id/registerbutton"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/LoginForm"
+        android:paddingTop="@dimen/loginFormTopPadding"
+        >
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/login_input_layout_email"
+            android:layout_width="@dimen/loginregisterinputboxwidth"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/loginregisteredittextmargintop"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/login_input_layout_password"
+            android:layout_alignStart="@+id/login_input_layout_password"
+            >
+
+            <EditText
+                android:id="@+id/login_input_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="@string/hint_email"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/login_input_layout_password"
+            android:layout_width="@dimen/loginregisterinputboxwidth"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/loginregisteredittextmargintop"
+            android:layout_below="@+id/login_input_layout_email"
+            android:layout_centerHorizontal="true">
+
+            <EditText
+                android:id="@+id/login_input_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/hint_password"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:textColor="@color/textColorPrimary"
+            android:id="@+id/loginbutton"
+            android:layout_alignLeft="@+id/login_input_layout_password"
+            android:layout_alignStart="@+id/login_input_layout_password"
+            android:layout_alignRight="@+id/login_input_layout_password"
+            android:layout_alignEnd="@+id/login_input_layout_password"
+            android:theme="@style/MyButton"
+            android:layout_below="@+id/login_input_layout_password"
+            android:layout_marginTop="@dimen/topMarginLarge"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/notRegistered"
+            android:layout_marginTop="@dimen/topMarginSmall"
+            android:id="@+id/NotRegisteredLink"
+            android:layout_below="@+id/loginbutton"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/forgotPassword"
+            android:layout_marginTop="@dimen/topMarginSmall"
+            android:id="@+id/ForgotPassword"
+            android:layout_below="@+id/NotRegisteredLink"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/brownLight"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+

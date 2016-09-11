@@ -1,0 +1,28 @@
+<resources>
+    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 340dp of available width.  -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="loginFormTopPadding">100dp</dimen>
+    <dimen name="loginregisterinputboxwidth">280dp</dimen>
+    <dimen name="loginregisteredittextmargintop">40dp</dimen>
+
+    <dimen name="topMarginSmall">30dp</dimen>
+    <dimen name="topMarginLarge">50dp</dimen>
+    <dimen name="topMarginVeryLarge">120dp</dimen>
+    <dimen name="marginSmall">15dp</dimen>
+
+    <dimen name="paddingMedium">15dp</dimen>
+    <dimen name="paddingSmall">8dp</dimen>
+    <dimen name="paddingSuperSmall">5dp</dimen>
+
+    <dimen name="mediumTextSize">25dp</dimen>
+    <dimen name="smallTextSize">20dp</dimen>
+
+    <dimen name="nav_drawer_width">260dp</dimen>
+    <dimen name="dashboardCardIconHeight">20dp</dimen>
+    <dimen name="card_radius">5dp</dimen>
+    <dimen name="detail_backdrop_height">150dp</dimen>
+
+</resources>
