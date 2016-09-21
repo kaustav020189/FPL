@@ -5,8 +5,9 @@
 
     <dimen name="loginFormTopPadding">50dp</dimen>
     <dimen name="loginregisterinputboxwidth">175dp</dimen>
-    <dimen name="loginregisteredittextmargintop">25dp</dimen>
+    <dimen name="loginregisteredittextmargintop">10dp</dimen>
 
+    <dimen name="topMarginVerySmall">10dp</dimen>
     <dimen name="topMarginSmall">18dp</dimen>
     <dimen name="topMarginLarge">30dp</dimen>
     <dimen name="topMarginVeryLarge">80dp</dimen>

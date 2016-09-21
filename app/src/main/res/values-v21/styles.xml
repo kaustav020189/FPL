@@ -24,7 +24,7 @@
 
     <style name="MyButton" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">@color/indigo</item>
-        <item name="colorButtonNormal">@color/blueGreen</item>
+        <item name="colorButtonNormal">@color/greenAquaDark</item>
     </style>
 
 </resources>

@@ -29,11 +29,12 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Forgot extends AppCompatActivity{
+public class Forgot extends AppCompatActivity implements View.OnClickListener{
 
     private static final String TAG = Forgot.class.getSimpleName();
     private EditText forgot_input_email;
     private Button sendForgotEmailButton;
+    private TextView textView1;
 
     private ProgressDialog pDialog;
 
@@ -48,7 +49,11 @@ public class Forgot extends AppCompatActivity{
 
         forgot_input_email = (EditText) findViewById(R.id.forgot_input_email);
 
+        textView1 = (TextView) findViewById(R.id.returnToLogin);
+
         sendForgotEmailButton = (Button) findViewById(R.id.sendForgotEmailButton);
+
+        textView1.setOnClickListener(this);
 
         // Progress dialog
         pDialog = new ProgressDialog(this);
@@ -206,6 +211,16 @@ public class Forgot extends AppCompatActivity{
             return false;
         } else {
             return android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.returnToLogin:
+                Intent intent = new Intent(getApplicationContext(),LoginRegister.class);
+                startActivity(intent);
+                finish();
         }
     }
 }

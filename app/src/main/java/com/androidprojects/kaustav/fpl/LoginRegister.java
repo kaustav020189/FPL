@@ -222,9 +222,6 @@ public class LoginRegister extends AppCompatActivity implements View.OnClickList
 
                     // Check for error node in json
                     if (!error) {
-                        // user successfully logged in
-                        // Create login session
-                        session.setLogin(true);
 
                         // Now store the user in SQLite
                         //String uid = jObj.getString("uid");
@@ -233,15 +230,27 @@ public class LoginRegister extends AppCompatActivity implements View.OnClickList
                         Integer id = user.getInt("userid");
                         String name = user.getString("username");
                         String email = user.getString("useremail");
-                        String pic = user.getString("userpic");
+                        Integer approvedstatus = user.getInt("approvedstatus");
 
-                        // Inserting row in users table
-                        db.addUser(id, name, email, pic);
+                        if(approvedstatus == 1) {
+                            // user successfully logged in
+                            // Create login session
+                            session.setLogin(true);
 
-                        // Launch main activity
-                        Intent intent = new Intent(LoginRegister.this,Home.class);
-                        startActivity(intent);
-                        finish();
+                            // Inserting row in users table
+                            db.addUser(id, name, email);
+
+                            // Launch main activity
+                            Intent intent = new Intent(LoginRegister.this, Home.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                        else{
+                            String notApprovedYet = "Your account not yet approved";
+                            // USer not yet approved by admin
+                            Toast.makeText(getApplicationContext(),
+                                    notApprovedYet, Toast.LENGTH_LONG).show();
+                        }
                     } else {
                         // Error in login. Get the error message
                         String errorMsg = jObj.getString("error_msg");
@@ -306,18 +315,11 @@ public class LoginRegister extends AppCompatActivity implements View.OnClickList
                     JSONObject jObj = new JSONObject(response);
                     boolean error = jObj.getBoolean("error");
                     if (!error) {
-                        // User successfully stored in MySQL
-                        // Now store the user in sqlite
-                        //String uid = jObj.getString("uid");
 
                         JSONObject user = jObj.getJSONObject("user");
                         Integer id = user.getInt("userid");
                         String name = user.getString("username");
                         String email = user.getString("useremail");
-                        String pic = user.getString("userpic");
-
-                        // Inserting row in users table
-                        db.addUser(id, name, email, pic);
 
                         Toast.makeText(getApplicationContext(), "Success! Try logging in", Toast.LENGTH_LONG).show();
 

@@ -29,7 +29,6 @@ public class SQLiteHandler extends SQLiteOpenHelper {
     private static final String KEY_ID = "userid";
     private static final String KEY_NAME = "username";
     private static final String KEY_EMAIL = "useremail";
-    private static final String KEY_PIC = "userpic";
     //private static final String KEY_UID = "uid";
     //private static final String KEY_CREATED_AT = "created_at";
  
@@ -43,8 +42,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
         String CREATE_LOGIN_TABLE = "CREATE TABLE " + TABLE_USER + "("
                 + KEY_ID + " INTEGER,"
                 + KEY_NAME + " TEXT,"
-                + KEY_EMAIL + " TEXT,"
-                + KEY_PIC + " TEXT"
+                + KEY_EMAIL + " TEXT"
                 + ")";
         db.execSQL(CREATE_LOGIN_TABLE);
  
@@ -64,14 +62,13 @@ public class SQLiteHandler extends SQLiteOpenHelper {
     /**
      * Storing user details in database
      * */
-    public void addUser(Integer userid, String name, String email, String pic) {
+    public void addUser(Integer userid, String name, String email) {
         SQLiteDatabase db = this.getWritableDatabase();
  
         ContentValues values = new ContentValues();
         values.put(KEY_ID, userid);
         values.put(KEY_NAME, name); // Name
         values.put(KEY_EMAIL, email); // Email
-        values.put(KEY_PIC, pic); // Pic
         //values.put(KEY_UID, uid); // UID
         //values.put(KEY_CREATED_AT, created_at); // Created At
  
@@ -97,7 +94,6 @@ public class SQLiteHandler extends SQLiteOpenHelper {
             user.put("userid", cursor.getString(0));
             user.put("username", cursor.getString(1));
             user.put("useremail", cursor.getString(2));
-            user.put("userpic", cursor.getString(3));
         }
         cursor.close();
         db.close();

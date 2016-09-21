@@ -15,7 +15,7 @@ public class LauncherActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    sleep(3000);
+                    sleep(5000);
                     Intent intent = new Intent(getApplicationContext(),LoginRegister.class);
                     startActivity(intent);
                     finish();

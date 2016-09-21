@@ -23,4 +23,16 @@
         <item name="colorButtonNormal">@color/blueGreen</item>
     </style>
 
+    <!--Floating label text style-->
+    <style name="MyHintText" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColorHighlight">@color/greenAquaDark</item>
+        <item name="android:textColorHint">@color/lightGray</item>
+    </style>
+
+    <!--Input field style-->
+    <style name="MyEditText" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/greenAquaDark</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
 </resources>

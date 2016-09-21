@@ -20,7 +20,7 @@
         android:id="@+id/forgot_input_layout_email"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="@dimen/topMarginSmall"
         android:layout_below="@+id/ForgotPasswordLabel"
         android:layout_centerHorizontal="true">
 
@@ -42,12 +42,19 @@
         android:textColor="@color/textColorPrimary"
         android:id="@+id/sendForgotEmailButton"
         android:theme="@style/MyButton"
-        android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/forgot_input_layout_email"
-        android:layout_alignEnd="@+id/forgot_input_layout_email"
+        android:layout_below="@+id/forgot_input_layout_email"
         android:layout_alignLeft="@+id/forgot_input_layout_email"
-        android:layout_alignStart="@+id/forgot_input_layout_email" />
+        android:layout_alignRight="@+id/forgot_input_layout_email" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/returnToLogin"
+        android:text="@string/returnToLogin"
+        android:textColor="@color/blueGreen"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
 
 
 </RelativeLayout>
